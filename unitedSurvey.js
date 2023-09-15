@@ -9,7 +9,7 @@ lpTag.external.surveyBot = {
       if (data.data.lines.length > 0) {
         if (data.data && data.data.lines && data.data.lines.length && data.data.lines[0].isWelcomeMessage && restartFlag) {
           console.log("new welcome message");
-          setTimeout(hideWrapperLine, 100);
+          setTimeout(hideWrapperLine, 50);
           console.log(`DATA: ${JSON.stringify(data.data.lines[0])}`);
           delete data.data.lines[0].quickReplies;
           delete data.data.lines[0].text;
@@ -37,6 +37,5 @@ lpTag.hooks.push({
 function hideWrapperLine() {
   const line = document.getElementsByClassName("lp_time lp_chat_line_auto_message lpc_message-area__timestamp lpc_message-area__timestamp_auto lpc_desktop lp_underline");
   console.log(line.length, "LINE");
-  //line[0].style.visibility = "hidden";
-  line[line.length - 1].style.visibility = "hidden";
+  line[line.length - 1].style.display = "none";
 }
