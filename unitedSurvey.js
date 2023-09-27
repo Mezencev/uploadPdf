@@ -9,7 +9,7 @@ lpTag.external.surveyBot = {
       if (data.data.lines.length > 0) {
         if (data.data && data.data.lines && data.data.lines.length && data.data.lines[0].isWelcomeMessage && restartFlag) {
           console.log("new welcome message");
-          setTimeout(hideWrapperLine, 50);
+          setTimeout(hideWrapperLine, 30);
           console.log(`DATA: ${JSON.stringify(data.data.lines[0])}`);
           delete data.data.lines[0].quickReplies;
           delete data.data.lines[0].text;
