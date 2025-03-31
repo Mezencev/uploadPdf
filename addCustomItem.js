@@ -1,4 +1,4 @@
-const ENGAGEMENT_ID = ["3940542738", "6011899250"];
+const ENGAGEMENT_ID = [3940542738, 6011899250];
 
 function addCustomMenuItem() {
   const list = document.querySelectorAll(
