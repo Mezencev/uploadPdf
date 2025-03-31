@@ -1,16 +1,3 @@
-lpTag.external = lpTag.external || {};
-lpTag.external.uploadPdf = {
-  // handle incoming messages
-  afterGetLines: function (data) {
-    console.log("DATA2")
-  },
-};
-
-lpTag.hooks.push({
-  name: "AFTER_GET_LINES",
-  callback: lpTag.external.uploadPdf.afterGetLines,
-});
-
       function addCustomMenuItem() {
         const list = document.querySelectorAll(
           '[data-lp-cust-id="action_items_wrapper"]'
@@ -59,7 +46,6 @@ lpTag.hooks.push({
         console.log(
           JSON.stringify(data) + " triggered by: " + JSON.stringify(eventInfo)
         );
-        console.log("LP", lpTag);
         const menuContainer = document.querySelector(
           ".lp_actions_bar_container"
         );
