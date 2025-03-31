@@ -2,7 +2,7 @@ lpTag.external = lpTag.external || {};
 lpTag.external.uploadPdf = {
   // handle incoming messages
   afterGetLines: function (data) {
-    console.log("DATA")
+    console.log("DATA2")
   },
 };
 
