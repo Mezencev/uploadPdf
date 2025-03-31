@@ -50,6 +50,7 @@ function unifiedWindow(data, eventInfo) {
   );
   const menuContainer = document.querySelector(".lp_actions_bar_container");
   const sdes = lpTag.sdes.get().impDisplay;
+  console.log("sdes", sdes);
   const engagement = sdes.find((item) => ENGAGEMENT_ID.includes(item.engId));
   console.log("ENAGEMENT", engagement);
   if (menuContainer && engagement) {
