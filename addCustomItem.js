@@ -1,4 +1,6 @@
-      function addCustomMenuItem() {
+const ENGAGEMENT_ID = '3940542738';
+
+function addCustomMenuItem() {
         const list = document.querySelectorAll(
           '[data-lp-cust-id="action_items_wrapper"]'
         );
@@ -43,14 +45,16 @@
       }
 
       function unifiedWindow(data, eventInfo) {
-        console.log(
-          JSON.stringify(data) + " triggered by: " + JSON.stringify(eventInfo)
-        );
         const menuContainer = document.querySelector(
           ".lp_actions_bar_container"
         );
-
-        if (menuContainer) {
+        const sdes = lpTag.sdes.get().impDisplay;
+        const engagement = sdes.find((item) => {
+          return item.engId == ENGAGEMENT_ID;
+        });    
+         console.log('ENAGEMENT', engagement);
+        if (menuContainer && engagement) {
+          console.log("Menu container found");
           const observer = new MutationObserver(() => {
             const isVisible =
               menuContainer.getAttribute("aria-hidden") === "false";
