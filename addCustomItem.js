@@ -1,4 +1,4 @@
-const ENGAGEMENT_ID = [3940542738, 6011899250, 6134767350, 6078862750, 6032884050];
+const ENGAGEMENT_ID = [3940542738, 6011899250, 6134767350, 6078862750, 6032884050, 6181750350, 6181750250];
 
 function addCustomMenuItem() {
   const list = document.querySelectorAll(
@@ -45,12 +45,9 @@ function addCustomMenuItem() {
 }
 
 function unifiedWindow(data, eventInfo) {
-  console.log(
-    JSON.stringify(data) + " triggered by: " + JSON.stringify(eventInfo)
-  );
+
   const menuContainer = document.querySelector(".lp_actions_bar_container");
   const sdes = lpTag.sdes.get().impDisplay;
-  console.log("sdes2", sdes);
   const engagement = sdes.find((item) => ENGAGEMENT_ID.includes(item.engId));
   console.log("ENAGEMENT", engagement);
   if (menuContainer && engagement) {
